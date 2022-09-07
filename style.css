@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-size: 1.1rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(269.45deg, #d18282 5.61%, #f0e3e3 90.73%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  background: linear-gradient(
+    269.78deg,
+    rgba(224, 202, 202, 0.35) -32.38%,
+    #f27f7f -29.46%,
+    rgba(239, 168, 185, 0.76) 60.93%
+  );
+  width: 400px;
+  color: rgb(7, 0, 0);
+  padding: 2rem 1.5rem;
+  border-radius: 5px;
+
+  display: grid;
+  gap: 1rem;
+
+  grid-template-areas:
+    "display display display display"
+    "ac c percentage on"
+    "btn7 btn8 btn9 minus"
+    "btn4 btn5 btn6 plus"
+    "btn1 btn2 btn3 multiply"
+    "divide btn0 dot equals";
+}
+.calculator div {
+  height: 50px;
+  /* width: 50px; */
+  background: rgba(207, 204, 204, 0.78);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  grid-area: display;
+}
+.btn-ac {
+  grid-area: ac;
+}
+.btn-c {
+  grid-area: c;
+}
+.btn-percentage {
+  grid-area: percentage;
+}
+.btn-on {
+  grid-area: on;
+}
+.btn-7 {
+  grid-area: btn7;
+}
+.btn-8 {
+  grid-area: btn8;
+}
+.btn-9 {
+  grid-area: btn9;
+}
+.btn-minus {
+  grid-area: minus;
+}
+.btn-4 {
+  grid-area: btn4;
+}
+.btn-5 {
+  grid-area: btn5;
+}
+.btn-6 {
+  grid-area: btn6;
+}
+.btn-plus {
+  grid-area: plus;
+}
+.btn-1 {
+  grid-area: btn1;
+}
+.btn-2 {
+  grid-area: btn2;
+}
+.btn-3 {
+  grid-area: btn3;
+}
+.btn-x {
+  grid-area: btnx;
+}
+.btn-divide {
+  grid-area: divide;
+}
+.btn-0 {
+  grid-area: btn0;
+}
+.btn-dot {
+  grid-area: dot;
+}
+.btn-equals {
+  grid-area: equals;
+}
