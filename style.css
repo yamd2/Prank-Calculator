@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* z-index: -2; */
 }
 .calculator {
   background: linear-gradient(
@@ -25,6 +26,7 @@ body {
   padding: 2rem 1.5rem;
   border-radius: 5px;
 
+  position: relative;
   display: grid;
   gap: 1rem;
 
@@ -46,8 +48,11 @@ body {
   align-items: center;
 }
 
-.display {
+.calculator div.display {
   grid-area: display;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Orbitron", sans-serif;
 }
 .btn-ac {
   grid-area: ac;
@@ -108,4 +113,14 @@ body {
 }
 .btn-equals {
   grid-area: equals;
+}
+
+.circle {
+  background: linear-gradient(to right, red, purple);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  left: 60px;
+  top: 220px;
 }
