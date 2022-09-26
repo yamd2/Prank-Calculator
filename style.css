@@ -5,44 +5,44 @@ body {
 * {
   box-sizing: border-box;
 }
-
 .wrapper {
   min-height: 100vh;
-  background: linear-gradient(269.45deg, #d18282 5.61%, #f0e3e3 90.73%);
+  background: linear-gradient(
+    180deg,
+    rgba(249, 254, 1, 0.68) 0%,
+    rgba(4, 255, 225, 0.66) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: -2; */
 }
 .calculator {
-  background: linear-gradient(
-    269.78deg,
-    rgba(224, 202, 202, 0.35) -32.38%,
-    #f27f7f -29.46%,
-    rgba(239, 168, 185, 0.76) 60.93%
-  );
+  background: rgba(255, 251, 251, 0.344);
+  backdrop-filter: blur(10px);
+
   width: 400px;
-  color: rgb(7, 0, 0);
+  color: black;
   padding: 2rem 1.5rem;
   border-radius: 5px;
 
-  position: relative;
   display: grid;
   gap: 1rem;
 
   grid-template-areas:
     "display display display display"
-    "ac c percentage on"
-    "btn7 btn8 btn9 minus"
-    "btn4 btn5 btn6 plus"
-    "btn1 btn2 btn3 multiply"
-    "divide btn0 dot equals";
+    "ac c perc divide"
+    "btn7 btn8 btn9 btnx"
+    "btn4 btn5 btn6 minus"
+    "btn1 btn2 btn3 plus"
+    "btn0 btn0 dot equals";
 }
+
 .calculator div {
   height: 50px;
   /* width: 50px; */
-  background: rgba(207, 204, 204, 0.78);
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(207, 204, 204, 0.58);
+  filter: drop-shadow(-12px 12px 14px rgba(0, 0, 0, 0.25));
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,9 @@ body {
   grid-area: display;
   display: flex;
   justify-content: flex-end;
+  padding: 1rem;
   font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
 }
 .btn-ac {
   grid-area: ac;
@@ -60,11 +62,11 @@ body {
 .btn-c {
   grid-area: c;
 }
-.btn-percentage {
-  grid-area: percentage;
+.btn-perc {
+  grid-area: perc;
 }
-.btn-on {
-  grid-area: on;
+.btn-divide {
+  grid-area: divide;
 }
 .btn-7 {
   grid-area: btn7;
@@ -75,8 +77,8 @@ body {
 .btn-9 {
   grid-area: btn9;
 }
-.btn-minus {
-  grid-area: minus;
+.btn-x {
+  grid-area: btnx;
 }
 .btn-4 {
   grid-area: btn4;
@@ -87,8 +89,8 @@ body {
 .btn-6 {
   grid-area: btn6;
 }
-.btn-plus {
-  grid-area: plus;
+.btn-minus {
+  grid-area: minus;
 }
 .btn-1 {
   grid-area: btn1;
@@ -99,11 +101,8 @@ body {
 .btn-3 {
   grid-area: btn3;
 }
-.btn-x {
-  grid-area: btnx;
-}
-.btn-divide {
-  grid-area: divide;
+.btn-plus {
+  grid-area: plus;
 }
 .btn-0 {
   grid-area: btn0;
@@ -116,11 +115,31 @@ body {
 }
 
 .circle {
-  background: linear-gradient(to right, red, purple);
+  background: linear-gradient(to right, blue, purple);
   width: 150px;
   height: 150px;
   border-radius: 50%;
+
   position: relative;
   left: 60px;
-  top: 220px;
+  top: 200px;
+}
+
+.prank {
+  animation: shake 0.5s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
