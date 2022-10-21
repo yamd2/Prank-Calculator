@@ -9,8 +9,8 @@ body {
   min-height: 100vh;
   background: linear-gradient(
     180deg,
-    rgba(249, 254, 1, 0.68) 0%,
-    rgba(4, 255, 225, 0.66) 100%
+    rgba(174, 176, 98, 0.68) 0%,
+    rgba(47, 125, 47, 0.66) 100%
   );
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@ body {
 .calculator div {
   height: 50px;
   /* width: 50px; */
-  background: rgba(207, 204, 204, 0.58);
+  background: rgba(91, 89, 89, 0.58);
   filter: drop-shadow(-12px 12px 14px rgba(0, 0, 0, 0.25));
 
   display: flex;
@@ -117,7 +117,7 @@ body {
 }
 
 .circle {
-  background: linear-gradient(to right, blue, purple);
+  background: linear-gradient(to right, rgb(118, 118, 134), rgb(196, 160, 196));
   width: 150px;
   height: 150px;
   border-radius: 50%;
